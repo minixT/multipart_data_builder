@@ -9,7 +9,7 @@ func loadFile(_ path: String) -> String {
 
 func loadFixture(_ name: String, ofType type: String) -> Data {
   let bundle = Bundle(identifier: "com.getflow.tests")
-  print(bundle?.bundlePath)
+  print(String(describing: bundle?.bundlePath))
   return (try! Data(contentsOf: URL(fileURLWithPath: bundle!.path(forResource: name, ofType: type)!)))
 }
 
